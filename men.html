@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">UrbanWear</div>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="men.html">Men</a></li>
+      <li><a href="women.html">Women</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html">Cart</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="products">
+  <h2 class="title">Men's Collection</h2>
+
+  <div class="product-grid">
+
+    <div class="card">
+      <div class="fake-img"><img src="/images/menshirt.jpg" alt="Formal Shirt"></div>
+      <h3>Formal Shirt</h3>
+      <p>$60</p>
+      <button onclick="addToCart('Formal Shirt',60)">Add To Cart</button>
+    </div>
+
+    <div class="card">
+      <div class="fake-img"><img src="/images/menjacket.jpg" alt="Winter Jacket"></div>
+      <h3>Winter Jacket</h3>
+      <p>$140</p>
+      <button onclick="addToCart('Winter Jacket',140)">Add To Cart..</button>
+    </div>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
