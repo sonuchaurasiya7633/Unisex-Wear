@@ -431,4 +431,28 @@ if (contactForm) {
 
   });
 
+
 }
+// NEWSLETTER SUBSCRIBE LOGIC
+
+const subscribeBtn = document.querySelector(".newsletter-box button");
+
+subscribeBtn.addEventListener("click", () => {
+
+  const emailInput = document.querySelector(".newsletter-box input");
+
+  if(emailInput.value === ""){
+
+    alert("Please enter your email");
+
+  }
+
+  else{
+
+    alert("Subscribed Successfully!");
+
+    emailInput.value = "";
+
+  }
+
+});
