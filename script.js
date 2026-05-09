@@ -26,27 +26,27 @@ const loginBtn = document.getElementById("loginBtn");
 
 // close popup
 
-// if (closeBtn) {
+if (closeBtn) {
 
-//   closeBtn.addEventListener("click", () => {
+  closeBtn.addEventListener("click", () => {
 
-//     popup.style.display = "none";
+    popup.style.display = "none";
 
-//   });
+  });
 
-// }
+}
 
 //open popup
 
-// if (openPopup) {
+if (openPopup) {
 
-//   openPopup.addEventListener("click", () => {
+  openPopup.addEventListener("click", () => {
 
-//     popup.style.display = "flex";
+    popup.style.display = "flex";
 
-//   });
+  });
 
-// }
+}
 
 // login / signup logic here
 
