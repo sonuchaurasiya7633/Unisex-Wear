@@ -5,48 +5,48 @@ const loginBtn = document.getElementById("loginBtn");
 
 // auto show popup after 1.2s if not logged in
 
-window.addEventListener("load", () => {
+// window.addEventListener("load", () => {
 
-  const loggedInUser =
-    localStorage.getItem("loggedInUser");
+//   const loggedInUser =
+//     localStorage.getItem("loggedInUser");
 
-  if (popup && !loggedInUser) {
+//   if (popup && !loggedInUser) {
 
-    setTimeout(() => {
+//     setTimeout(() => {
 
-      popup.style.display = "flex";
+//       popup.style.display = "flex";
 
-    }, 1200);
+//     }, 1200);
 
-  }
+//   }
 
-  updateNavbar();
+//   updateNavbar();
 
-});
+// });
 
 // close popup
 
-if (closeBtn) {
+// if (closeBtn) {
 
-  closeBtn.addEventListener("click", () => {
+//   closeBtn.addEventListener("click", () => {
 
-    popup.style.display = "none";
+//     popup.style.display = "none";
 
-  });
+//   });
 
-}
+// }
 
 //open popup
 
-if (openPopup) {
+// if (openPopup) {
 
-  openPopup.addEventListener("click", () => {
+//   openPopup.addEventListener("click", () => {
 
-    popup.style.display = "flex";
+//     popup.style.display = "flex";
 
-  });
+//   });
 
-}
+// }
 
 // login / signup logic here
 
