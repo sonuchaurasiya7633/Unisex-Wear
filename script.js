@@ -24,6 +24,31 @@ const loginBtn = document.getElementById("loginBtn");
 
 // });
 
+// auto show popup after 1.2s if not logged in
+
+window.addEventListener("load", () => {
+
+  const loggedInUser =
+    localStorage.getItem("loggedInUser");
+
+  // agar login nahi hai tabhi popup show hoga
+
+  if (popup && !loggedInUser) {
+
+    setTimeout(() => {
+
+      popup.style.display = "flex";
+
+    }, 1200);
+
+  }
+
+  // refresh ke baad navbar update hoga
+
+  updateNavbar();
+
+});
+
 // close popup
 
 if (closeBtn) {
@@ -36,11 +61,28 @@ if (closeBtn) {
 
 }
 
+
+
 //open popup
 
 if (openPopup) {
 
-  openPopup.addEventListener("click", () => {
+  openPopup.addEventListener("click", (e) => {
+
+    const loggedInUser =
+      JSON.parse(localStorage.getItem("loggedInUser"));
+
+    // AGAR USER LOGIN HAI
+    // TO POPUP OPEN MAT KARO
+
+    if (loggedInUser) {
+
+      return;
+
+    }
+
+    // AGAR LOGIN NAHI HAI
+    // TABHI POPUP OPEN HOGA
 
     popup.style.display = "flex";
 
@@ -188,7 +230,7 @@ function updateNavbar() {
 
     navBtn.onclick = () => {
 
-      popup.style.display = "flex";
+      // popup.style.display = "flex";
 
     };
 
@@ -219,7 +261,7 @@ function addToCart(name, price) {
 
     alert("Please login first");
 
-    popup.style.display = "flex";
+    // popup.style.display = "flex";
 
     return;
 
@@ -359,7 +401,7 @@ function buyNow(name, price) {
 
     alert("Please login first");
 
-    popup.style.display = "flex";
+    // popup.style.display = "flex";
 
     return;
 
